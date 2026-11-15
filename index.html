@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kshitij Singh — Cybercrime Investigator, OSINT & Digital Forensics</title>
+  <meta name="description" content="Kshitij Singh — Founder of Secured Bharat. Cybercrime investigator, OSINT and digital forensics specialist, dark web researcher and speaker.">
+  <meta property="og:title" content="Kshitij Singh — Founder @ Secured Bharat">
+  <meta property="og:description" content="Cybercrime investigation, dark web monitoring, OSINT and digital forensics.">
+  <meta property="og:type" content="profile">
+  <meta property="og:image" content="assets/kshitij.jpg">
+  <meta name="theme-color" content="#0b0f14">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="Kshitij Singh — home"><span class="brand-mark">KS</span><span class="brand-name">Kshitij Singh</span></a>
+    <nav class="nav-links" id="nav-links" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#experience">Experience</a>
+      <a href="#ventures">Ventures</a>
+      <a href="#speaking">Training</a>
+      <a href="#intel">Intel feed</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch colour theme">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path class="sun" d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.66-5.66 1.41-1.41M4.93 19.07l1.41-1.41m0-11.32L4.93 4.93m14.14 14.14-1.41-1.41M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"/><path class="moon" d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <canvas id="net" aria-hidden="true"></canvas>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="pulse"></span><span id="hero-location"></span></p>
+          <h1 id="hero-name"></h1>
+          <p class="typed" aria-live="off"><span class="prompt">&gt;</span> <span id="typed"></span><span class="caret" aria-hidden="true"></span></p>
+          <p class="lede" id="hero-tagline"></p>
+          <div class="cta">
+            <a class="btn primary" href="#contact">Get in touch</a>
+            <a class="btn" href="#intel">Read the intel feed</a>
+          </div>
+        </div>
+        <figure class="dossier">
+          <div class="dossier-frame">
+            <img id="hero-photo" alt="Portrait of Kshitij Singh" width="640" height="640">
+            <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+            <span class="scan" aria-hidden="true"></span>
+          </div>
+          <figcaption>
+            <span>ID</span><b id="hero-handle"></b>
+            <span>Cert</span><b id="hero-cert"></b>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="wrap">
+        <dl class="stats" id="stats"></dl>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap two-col">
+        <div>
+          <p class="kicker">01 / About</p>
+          <h2>Investigator first, educator always.</h2>
+          <div id="about-text" class="prose"></div>
+        </div>
+        <div class="terminal reveal" id="terminal" aria-label="Interactive terminal">
+          <div class="term-bar"><i></i><i></i><i></i><span>kshitij@securedbharat: ~</span></div>
+          <div class="term-body" id="term-body">
+            <div id="term-out" aria-live="polite"></div>
+            <form id="term-form" autocomplete="off">
+              <label for="term-in"><span class="prompt">$</span></label>
+              <input id="term-in" type="text" spellcheck="false" autocapitalize="off" placeholder="type 'help' and press Enter" aria-label="Terminal command">
+            </form>
+          </div>
+          <div class="term-chips" id="term-chips"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="expertise">
+      <div class="wrap">
+        <p class="kicker">02 / Expertise</p>
+        <h2>What I work on.</h2>
+        <div class="grid cards" id="expertise-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="wrap">
+        <p class="kicker">03 / Experience</p>
+        <h2>Where I've done the work.</h2>
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+    </section>
+
+    <section class="section alt" id="ventures">
+      <div class="wrap">
+        <p class="kicker">04 / Ventures</p>
+        <h2>What I'm building.</h2>
+        <div class="grid ventures" id="ventures-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="speaking">
+      <div class="wrap">
+        <p class="kicker">05 / Speaking &amp; Training</p>
+        <h2>Workshops that show how attackers actually operate.</h2>
+        <div class="grid programs" id="programs-grid"></div>
+        <p class="note">Recorded sessions live on <a href="https://www.youtube.com/@SecuredBharat" target="_blank" rel="noopener">the Secured Bharat YouTube channel</a>. Want a session for your campus, team or unit? <a href="#contact">Ask me</a>.</p>
+      </div>
+    </section>
+
+    <section class="section alt" id="intel">
+      <div class="wrap">
+        <p class="kicker">06 / Intel feed</p>
+        <div class="feed-head">
+          <h2>Latest from Secured Intel.</h2>
+          <p class="feed-meta" id="feed-meta"></p>
+        </div>
+        <div class="feed-tools">
+          <label class="search">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="m21 21-4.3-4.3M11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/></svg>
+            <input id="feed-search" type="search" placeholder="Search CVEs, actors, topics…" aria-label="Search articles">
+          </label>
+          <div class="chips" id="feed-tags" role="group" aria-label="Filter by topic"></div>
+        </div>
+        <div class="grid feed" id="feed"></div>
+        <p class="empty" id="feed-empty" hidden>No articles match that search.</p>
+        <div class="center"><button class="btn" id="feed-more" type="button">Show more</button></div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="wrap two-col">
+        <div>
+          <p class="kicker">07 / Contact</p>
+          <h2>Have a case, a collaboration or a classroom?</h2>
+          <p class="lede">I'm open to investigation support, law-enforcement and academic collaborations, speaking invitations and corporate training.</p>
+          <div class="cta">
+            <a class="btn primary" id="contact-email" href="#"></a>
+            <button class="btn" id="copy-email" type="button">Copy email</button>
+          </div>
+        </div>
+        <ul class="links" id="contact-links"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>© <span id="year"></span> Kshitij Singh</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="data/profile.js"></script>
+  <script src="data/articles.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
